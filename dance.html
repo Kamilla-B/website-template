@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Dance</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- link the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+
+
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    </link>
+  </head>
+
+  <body>
+   <nav>
+      <!-- Add the navigation bar here-->
+      <ul class="nav-bar">
+        <li class="nav-item"><a href="dance.html">Traditional Dance</a></li>
+        <li class="nav-item"><a href="buddhism.html">Buddhism in Buryatia</a></li>
+        <li class="nav-item"><a href="food.html">Buryat Cuisine</a></li>
+        <li class="nav-item"><a href="story.html">Personal Stories</a></li>
+        <li class="nav-item"><a href="lake.html">Lake Baikal</a></li>
+        <li class="nav-item"><a href="help.html">Help Out</a></li>
+        <li class="nav-item"><a href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
+    <header class="homepage-heading">
+
+
+    <h1>Traditional Dance in Buryatia</h1>
+
+
+
+    </header>
+<main>
+    <div class="video-container">
+      <div class="video">
+        <!-- Embed the YouTube video using iframe -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Igva-bBXtlk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=Igva-bBXtlk"</a>
+      </div>
+
+      <div class="video2">
+        <!-- Embed the YouTube video using iframe -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/E2coKpjUGsg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=E2coKpjUGsg"></a>
+      </div>
+    </div>
+  </body>
+  </html>
+
+    <style>
+      /* styles.css */
+      .video-container {
+        display: flex; /* Use flexbox to arrange items side by side */
+        gap: 10px; /* Space between videos */
+        justify-content: center; /* Center align the videos horizontally */
+      }
+
+      .video, .video2 {
+        flex: 1; /* Allow videos to grow and shrink equally */
+        max-width: 100%; /* Ensure videos don’t exceed container width */
+      }
+
+      @media (max-width: 800px) {
+        .video, .video2 {
+          flex: 1 1 100%; /* Stack videos vertically on smaller screens */
+          margin-bottom: 10px; /* Space between stacked videos */
+        }
+      }
+
+    </style>
+</main>
+  </body>
+  </html>

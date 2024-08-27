@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Lake Baikal</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- link the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- link the webpage's JavaScript file -->
+
+  </head>
+
+  <body>
+   <nav>
+      <!-- Add the navigation bar here-->
+      <ul class="nav-bar">
+        <li class="nav-item"><a href="buddhism.html">Buddhism in Buryatia</a></li>
+        <li class="nav-item"><a href="food.html">Buryat Cuisine</a></li>
+        <li class="nav-item"><a href="story.html">Personal Stories</a></li>
+        <li class="nav-item"><a href="lake.html">Lake Baikal</a></li>
+        <li class="nav-item"><a href="help.html">Help Out</a></li>
+        <li class="nav-item"><a href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a href="index.html">Home</a></li>
+      </ul>
+   </nav>
+    <h1>Personal Stories</h1>
+
+
+<main>
+
+  <p>In a world where cultural narratives are often overshadowed, it is essential to amplify the voices of those who contribute to the rich heritage of our global community. The Buryat community, with its deep roots in Siberia and rich history, offers a wealth of experiences and insights that deserve to be heard and understood. By focusing on individual stories, we aim to provide a platform where the Buryat people can share their journeys, challenges, and triumphs. Hearing these specific perspectives enriches our appreciation of the Buryat identity and highlights the resilience and diversity within this vibrant community. Our mission is to spotlight the people who make up Buryatia and celebrate the voices that make Buryatia truly unique.
+  </p>
+
+
+   <!-- This made the submit your story thing!-->
+
+      <div class="container">
+          <h2>Submit Your Story</h2>
+          <form action="/process_form.php" method="POST">
+              <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="story">Your Story:</label>
+                  <textarea id="story" name="story" rows="8" required></textarea>
+              </div>
+              <div class="form-group">
+                  <button type="submit">Submit</button>
+                    <a href="submit.html"></a>
+                  <script src="/submit.js" defer></script>
+
+              </div>
+          </form>
+       </div>
+
+ 
+
+</main>
+
+
+  </body>
+</html>
