@@ -343,7 +343,6 @@ h2 {
   display: flex;
   transition: transform 0.3s ease; /* Smooth transition */
   width: calc(100% * 5); /* 4 images, adjust for your total */
-  overflow: hidden;
 }
 
 .carousel-item {
