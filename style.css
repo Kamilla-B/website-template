@@ -333,9 +333,11 @@ h2 {
 } */
 
 .carousel-container {
-  width: 1300px; /* Adjust as needed */
+  width: 100vw; /* Full width of the viewport */
+  max-width: 1300px; /* Maximum width for the carousel */
   margin: 20px auto;
   position: relative;
+  overflow: hidden; /* Hide any overflowing images */
   
 }
 
@@ -343,6 +345,7 @@ h2 {
   display: flex;
   transition: transform 0.3s ease; /* Smooth transition */
   width: calc(100% * 5); /* 4 images, adjust for your total */
+  overflow: hidden;
 }
 
 .carousel-item {
