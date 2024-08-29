@@ -355,7 +355,7 @@ h2 {
 .carousel-item img {
   width: 100%; /* Full width of the carousel-item */
   height: 100%; /* Full height of the carousel-item */
-  object-fit: cover; /* Ensure images scale to fit the container */
+  object-fit: contain; /* Ensure images scale to fit the container */
 }
 
 .carousel-button {
