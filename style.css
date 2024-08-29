@@ -333,7 +333,6 @@ h2 {
 } */
 
 .carousel-container {
-  width: 100vw; /* Full width of the viewport */
   max-width: 1300px; /* Maximum width for the carousel */
   margin: 20px auto;
   overflow: hidden; /* Hide any overflowing images */
