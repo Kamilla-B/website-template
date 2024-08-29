@@ -342,11 +342,11 @@ h2 {
 .carousel-track {
   display: flex;
   transition: transform 0.3s ease; /* Smooth transition */
-  width: calc(100% * 4); /* 4 images, adjust for your total */
+  width: calc(100% * 5); /* 4 images, adjust for your total */
 }
 
 .carousel-item {
-  width: 4.8%; /* Each image is 25% of the container width */
+  flex: 0 0 20%; /* Each image is 20% of the container width */
   height: 300px; /* Adjust as needed */ /* Prevent images from spilling out */
   margin-right: 10px; /* Adjust spacing between images */
   
