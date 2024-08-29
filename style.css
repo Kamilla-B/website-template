@@ -336,7 +336,6 @@ h2 {
   width: 100vw; /* Full width of the viewport */
   max-width: 1300px; /* Maximum width for the carousel */
   margin: 20px auto;
-  position: relative;
   overflow: hidden; /* Hide any overflowing images */
   
 }
