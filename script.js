@@ -8,31 +8,52 @@
 //} 
 
 
-let currentPosition = 0; 
-const carouselTrack = document.querySelector('.carousel-track');
-const itemWidth = carouselTrack.children[0].offsetWidth; // Width of a single carousel item
-const itemsToShow = 5; // Number of items to display at a time
-const totalItems = carouselTrack.children.length;
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselTrack = document.querySelector('.carousel-track');
+  const carouselItems = Array.from(carouselTrack.children);
+  const visibleItemsCount = 5; // Number of items to show at a time
 
-function moveCarousel(direction) {
-  // Update currentPosition based on direction
-  currentPosition += direction;
-
-  // Loop around if we go past the last item or before the first item
-  if (currentPosition < 0) {
-    currentPosition = totalItems - 1; // Move to the last item
-  } else if (currentPosition >= totalItems) {
-    currentPosition = 0; // Move to the first item
+  // Function to get the width of an element including its margins
+  function getElementWidthIncludingMargins(element) {
+    const width = element.offsetWidth;
+    const style = window.getComputedStyle(element);
+    const marginLeft = parseFloat(style.marginLeft);
+    const marginRight = parseFloat(style.marginRight);
+    return width + marginLeft + marginRight;
   }
 
-  const newTranslation = -currentPosition * itemWidth;
+  // Calculate the width of one item including margins
+  const itemWidthIncludingMargins = getElementWidthIncludingMargins(carouselItems[0]);
+  const totalItems = carouselItems.length;
 
-  // Apply the new translation to move the carousel
-  carouselTrack.style.transform = `translateX(${newTranslation}px)`;
-}
+  // Set the track width to accommodate all items
+  carouselTrack.style.width = `${itemWidthIncludingMargins * totalItems}px`;
 
-// Example event listeners for buttons
-document.querySelector('.carousel-button.prev').addEventListener('click', () => moveCarousel(-1));
-document.querySelector('.carousel-button.next').addEventListener('click', () => moveCarousel(1));
+  let currentPosition = 0;
 
+  // Function to move the carousel by one image
+  function moveCarousel(direction) {
+    // Update position by 1 (either forward or backward)
+    currentPosition += direction;
+
+    // Ensure the position is within bounds
+    if (currentPosition < 0) {
+      currentPosition = totalItems - visibleItemsCount;
+    } else if (currentPosition > totalItems - visibleItemsCount) {
+      currentPosition = 0;
+    }
+
+    const newTranslation = -currentPosition * itemWidthIncludingMargins;
+    carouselTrack.style.transform = `translateX(${newTranslation}px)`;
+  }
+
+  // Event listeners for buttons
+  document.querySelector('.carousel-button.next').addEventListener('click', () => {
+    moveCarousel(1);
+  });
+
+  document.querySelector('.carousel-button.prev').addEventListener('click', () => {
+    moveCarousel(-1);
+  });
+});
 
