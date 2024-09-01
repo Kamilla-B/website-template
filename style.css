@@ -333,29 +333,33 @@ h2 {
 } */
 
 .carousel-container {
-  max-width: 1300px; /* Maximum width for the carousel */
+  max-width: 1300px; 
   margin: 20px auto;
-  overflow: hidden; /* Hide any overflowing images */
-  
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.3s ease; /* Smooth transition */
-  width: calc(100% * 5); /* 4 images, adjust for your total */
+  transition: transform 0.3s ease;
+  width: auto;
 }
 
 .carousel-item {
-  flex: 0 0 20%; /* Each image is 20% of the container width */
-  height: 300px; /* Adjust as needed */ /* Prevent images from spilling out */
-  margin-right: 10px; /* Adjust spacing between images */
-  
+  flex: 0 0 12.8%; /* Back to the original percentage that worked */
+  padding-bottom: 12.8%; /* Square aspect ratio */
+  margin-right: 10px; 
+  position: relative;
+  box-sizing: border-box;
 }
 
 .carousel-item img {
-  width: 100%; /* Full width of the carousel-item */
-  height: 100%; /* Full height of the carousel-item */
-  object-fit: contain; /* Ensure images scale to fit the container */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-button {
@@ -367,7 +371,7 @@ h2 {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
-  z-index: 10; /* Ensure the button is above the images */
+  z-index: 10;
 }
 
 .carousel-button.prev {
@@ -381,13 +385,3 @@ h2 {
 .carousel-control:focus {
   outline: none;
 }
-
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-/* Style for video container */
